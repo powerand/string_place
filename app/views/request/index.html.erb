@@ -1,0 +1,11 @@
+<div class="l-side">
+  <%= render 'form' %>
+</div>
+<div class="r-side">
+  <div class="requests_count"><%= splur(Request.all_count, 'запрос', 'запроса', 'запросов') %></div>
+  <div class="requests_index">
+    <% @requests.each do |req| %>
+    <%= render partial: 'request', locals: {:req => req} %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+// Place all the styles related to the Request controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$sidePadding: 20px;
+$elementMargin: 20px;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  line-height: 21px;
+}
+body, input {
+  font-family: monospace;
+}
+.l-side, .r-side {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 2 * $sidePadding $sidePadding;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.l-side {
+  left: 0;
+  padding-left: 2 * $sidePadding;
+}
+.r-side {
+  right: 0;
+  padding-right: 2 * $sidePadding;
+}
+.new_request > * {
+  width: 100%;
+  margin-bottom: $elementMargin;
+  display: block;
+}
+.new_request > *:last-child {
+  margin-bottom: 0;
+}
+.new_request > textarea, .requests_index {
+  height: 300px;
+}
+.requests_count {
+  margin-bottom: $elementMargin;
+  background-color: #eee;
+  color: #000;
+}
+.requests_index {
+  background-color: #eee;
+  color: #000;
+  overflow: auto;
+}
+.requests_index > p {
+  margin: 0;
+}
