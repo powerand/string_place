@@ -13,7 +13,4 @@ class RequestController < ApplicationController
       raise req.errors.inspect
     end
   end
-
-  def count
-  end
 end
